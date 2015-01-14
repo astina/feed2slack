@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+
+$console = new Application('Feed2Slack', '1.0.0');
+$console->add(new Astina\Feed2Slack\CheckFeedCommand());
+$console->run();

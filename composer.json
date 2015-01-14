@@ -1,0 +1,23 @@
+{
+    "name": "astina/feed2slack",
+    "description": "Reads RSS feeds and sends new items as Slack alerts.",
+    "type": "project",
+    "keywords": ["rss", "feed", "slack"],
+    "homepage": "https://github.com/astina/feed2slack",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Astina AG",
+            "email": "admin@astina.ch"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+        "symfony/console": "~2.5",
+        "symfony/yaml": "~2.5",
+        "symfony/finder": "~2.5",
+        "guzzlehttp/guzzle": "~5.1"
+    }
+}
