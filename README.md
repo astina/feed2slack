@@ -1,7 +1,7 @@
-Feed 2 HipChat
-==============
+Feed 2 Slack
+============
 
-Reads RSS feeds and sends new items as HipChat alerts.
+Reads RSS feeds and sends new items as Slack alerts.
 
 ### Installation
 
@@ -12,5 +12,5 @@ Reads RSS feeds and sends new items as HipChat alerts.
 
 ### Usage
 
-Run `bin/feed2hipchat [FEED_URL] --application=[NAME]` to check an RSS feed for new alerts. The idea is that this command is run periodically via cronjob.
+Run `bin/feed2slack [FEED_URL]` to check an RSS feed for new alerts. The idea is that this command is run periodically via cronjob.
 
