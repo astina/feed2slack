@@ -72,12 +72,22 @@ class CheckFeedCommand extends Command
 
     private function sendAlert($feedItem, $application)
     {
-        $message = sprintf("%s\n%s\n\n%s", $feedItem->title, $feedItem->link, $feedItem->description);
+        $title = (string) $feedItem->title,
+        $url = (string) $feedItem->link;
+        $message = (string) $feedItem->description;
 
         $payload = [
             'channel' => $this->config['slack_channel'],
             'username' => $this->config['slack_username'],
-            'text' => $message,
+            'mrkdwn' => true,
+            'attachments' => [
+                [
+                    'title' => $title,
+                    'title_link' => $url,
+                    'color' => 'danger',
+                    'text' => $message,
+                ],
+            ],
             'icon_emoji' => $this->config['slack_icon'],
         ];
 
